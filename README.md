@@ -41,7 +41,7 @@ core/
 
 ## ⚙️ Setup & Installation
 
-### Requirements
+Requirements
 - PostgreSQL installed and database created
 - `.env` file with `SECRET_KEY` and DB credentials
 
@@ -56,7 +56,7 @@ DB_HOST=127.0.0.1
 DB_PORT=5432
 ```
 
-## In settings.py, configure PostgreSQL:
+Configure PostgreSQL `(settings.py)`
 ```
 import os
 DATABASES = {
@@ -70,11 +70,11 @@ DATABASES = {
   }
 }
 ```
-## Since a custom user model is used:
+Since a custom user model is used:
 ```
 AUTH_USER_MODEL = "accounts.User"
 ```
-# Local Setup
+# 🚀 Local Setup
 ```
 # 1. Create virtual environment
 python -m venv .venv
@@ -174,4 +174,5 @@ MIT (or add your preferred license)
 
 # 🤝 Contributions
 Pull requests and issues are welcome
+
 
