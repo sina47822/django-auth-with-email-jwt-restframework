@@ -129,4 +129,23 @@ response.set_cookie(
 | GET    | `/api/user/`     | Get authenticated user info | ✅             |
 | POST   | `/api/logout/`   | Logout and clear JWT cookie | ✅             |
 
+---
 
+📦 .gitignore Example
+```
+.venv/
+__pycache__/
+*.pyc
+*.sqlite3
+.env
+.idea/
+.vscode/
+```
+
+# ✅ License
+MIT (or add your preferred license)
+
+---
+
+# 🤝 Contributions
+Pull requests and issues are welcome
