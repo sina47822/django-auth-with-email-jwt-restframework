@@ -1,5 +1,7 @@
 ﻿# Django + DRF + JWT (HttpOnly Cookie) + PostgreSQL — User Authentication API
 
+[🇮🇷 دستور عمل فارسی](./README.fa.md)
+
 A simple user authentication API built with **Django**, **Django REST Framework**, and **JWT**.  
 The JWT token is stored in an **HttpOnly cookie** for security. The project uses **PostgreSQL** as the database and a custom `User` model extending `AbstractUser`.
 
@@ -174,5 +176,6 @@ MIT (or add your preferred license)
 
 # 🤝 Contributions
 Pull requests and issues are welcome
+
 
 
