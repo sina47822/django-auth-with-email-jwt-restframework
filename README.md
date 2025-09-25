@@ -35,6 +35,7 @@ core/
     ├── serializers.py
     ├── views.py
     └── urls.py
+```
 
 ---
 
@@ -127,4 +128,5 @@ response.set_cookie(
 | POST   | `/api/login/`    | Login, set JWT cookie       | ❌             |
 | GET    | `/api/user/`     | Get authenticated user info | ✅             |
 | POST   | `/api/logout/`   | Logout and clear JWT cookie | ✅             |
+
 
