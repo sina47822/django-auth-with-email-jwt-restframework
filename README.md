@@ -96,7 +96,7 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-# Authentication & JWT
+# 🔐 Authentication & JWT
 
 - On login, a JWT is generated with:
 -- exp: 60 minutes
@@ -121,13 +121,38 @@ response.set_cookie(
     max_age=60*60
 )
 ```
-
+# 📚 API Endpoints
 | Method | Path             | Description                 | Auth Required |
 | ------ | ---------------- | --------------------------- | ------------- |
 | POST   | `/api/register/` | Register new user           | ❌             |
 | POST   | `/api/login/`    | Login, set JWT cookie       | ❌             |
 | GET    | `/api/user/`     | Get authenticated user info | ✅             |
 | POST   | `/api/logout/`   | Logout and clear JWT cookie | ✅             |
+
+---
+
+# 🧪 Quick Test with cURL
+Register
+```
+curl -X POST http://127.0.0.1:8000/api/register/ \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Alice","email":"alice@example.com","password":"Password123"}'
+```
+Login
+```
+curl -i -X POST http://127.0.0.1:8000/api/login/ \
+  -H "Content-Type: application/json" \
+  -d '{"email":"alice@example.com","password":"Password123"}' \
+  -c cookies.txt
+```
+Get User Info
+```
+curl -X GET http://127.0.0.1:8000/api/user/ -b cookies.txt
+```
+Logout
+```
+curl -X POST http://127.0.0.1:8000/api/logout/ -b cookies.txt
+```
 
 ---
 
@@ -149,3 +174,4 @@ MIT (or add your preferred license)
 
 # 🤝 Contributions
 Pull requests and issues are welcome
+
